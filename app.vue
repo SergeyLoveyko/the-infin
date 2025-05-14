@@ -1,6 +1,6 @@
 <template>
   <AppHero />
-  <!-- <AppVideo /> -->
+  <AppVideo />
   <!-- <AppBusines /> -->
   <!-- <AppIndividuals /> -->
 </template>

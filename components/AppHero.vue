@@ -1,9 +1,11 @@
 <template>
-  <section class="hero wrapper">
-    <AppHeader />
-    <AppHeroMobile />
-    <AppHeroContribution />
-  </section>
+  <div class="wrapper">
+    <section class="hero">
+      <AppHeader />
+      <AppHeroMobile />
+      <AppHeroContribution />
+    </section>
+  </div>
 </template>
 
 <style lang="scss" scoped>
