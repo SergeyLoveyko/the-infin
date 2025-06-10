@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: false,
   app: {
-    baseURL: '/',
+    baseURL: '/the-infin/',
   },
   css: ['/assets/scss/main.scss']
 })
