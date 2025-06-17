@@ -1,5 +1,11 @@
 <script setup>
-const props = defineProps({ item: {title: String, text: String, image: String} })
+const props = defineProps({ 
+  item: {
+    title: String,
+    text: String,
+    image: String
+  }
+})
 </script>
 
 <template>
