@@ -20,7 +20,7 @@ const items = [
         <AppTitleMore class="title">Why choose the INFIN</AppTitleMore>
       </div>
       <div class="choose__content">
-        <AppChooseContentItem v-for="item in items" :key="item" :item="item"/>
+        <TheChooseContentItem v-for="item in items" :key="item" :item="item"/>
       </div>
     </section>
   </div>

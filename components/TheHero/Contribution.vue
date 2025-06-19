@@ -5,7 +5,7 @@
     </div>
     <div class="contribution__title">
       <h2>To know your true value,  Help others understand theirs.</h2>
-      <img src="../assets/image/group-stars.png" alt="group stars">
+      <img src="/assets/image/group-stars.png" alt="group stars">
     </div>
     <div class="contribution__btn">
       <AppButton link-classes="button button__black-small">Schedule a demo</AppButton>

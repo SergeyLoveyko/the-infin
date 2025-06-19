@@ -1,14 +1,18 @@
 import { initAsyncCompiler } from 'sass-embedded';
+<script setup>
+const config = useRuntimeConfig()
+</script>
+
 <template>
   <div class="wrapper">
     <section class="video">
       <div class="video__btn">
           Play
           <div class="video__btn-icon">
-            <img src="../assets/image/icon-play.png" alt="">
+            <img src="/assets/image/icon-play.png" alt="icon play">
           </div>
       </div>
-      <video class="video__video" src="#" poster="../assets/image/image-video.jpg"></video>
+      <video class="video__video" src="#" :poster="`${config.app.baseURL}image/image-video.jpg`"></video>
     </section>
   </div>
 </template>

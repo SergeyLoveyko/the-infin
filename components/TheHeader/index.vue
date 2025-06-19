@@ -1,7 +1,7 @@
 <template>
   <header class="header">
-    <AppHeaderLogo />
-    <AppHeaderNav />
+    <TheHeaderLogo />
+    <AppNav />
     <AppButton link-classes="button">Contact</AppButton>
   </header>
 </template>

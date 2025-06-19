@@ -1,9 +1,9 @@
 <template>
   <div class="wrapper">
     <section class="hero">
-      <AppHeader />
-      <AppHeroMobile />
-      <AppHeroContribution />
+      <TheHeader />
+      <TheHeroMobile />
+      <TheHeroContribution />
     </section>
   </div>
 </template>

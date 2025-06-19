@@ -30,7 +30,7 @@
 .mobile__image {
   width: 201px;
   height: 160px;
-  background-image: url("../assets/image/hero-app.jpg");
+  background-image: url("/assets/image/hero-app.jpg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: 160%;
