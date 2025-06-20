@@ -1,9 +1,16 @@
 <script setup>
-const props = defineProps({ 
+// const props = defineProps({ 
+//   item: {
+//     title: String,
+//     text: String,
+//     image: String
+//   }
+// })
+const config = useRuntimeConfig()
+const props = defineProps({
   item: {
-    title: String,
-    text: String,
-    image: String
+    type: Object,
+    required: true
   }
 })
 </script>
@@ -11,14 +18,14 @@ const props = defineProps({
 <template>
   <div class="container">
     <div class="container__title">
-      <span>{{ props.item.title }}</span>
+      <span>{{ item.title }}</span>
     </div>
     <div class="container__text">
       <p>
-        {{ props.item.text }}
+        {{ item.text }}
       </p>
     </div>
-    <img :src="`/_nuxt/assets/image/${props.item.image}.jpg`" alt="people foto">
+    <img :src="`${config.app.baseURL}image/${item.image}.jpg`" alt="people foto">
   </div>
 </template>
 
