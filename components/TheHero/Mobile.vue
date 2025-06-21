@@ -1,8 +1,17 @@
+<script setup>
+const props = defineProps({
+  date: {
+    type: Object,
+    required: true
+  }
+})
+</script>
+
 <template>
   <div class="hero__mobile mobile">
     <div class="mobile__content">
-      <span>Web +</span>
-      <span>Mobile app</span>
+      <span>{{ date.textOne }}</span>
+      <span>{{ date.textTwo }}</span>
     </div>
     <div class="mobile__image"></div>
   </div>

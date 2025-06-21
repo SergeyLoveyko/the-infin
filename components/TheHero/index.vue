@@ -1,9 +1,13 @@
+<script setup>
+import { heroData } from '@/stores/hero'
+</script>
+
 <template>
   <div class="wrapper">
     <section class="hero">
       <TheHeader />
-      <TheHeroMobile />
-      <TheHeroContribution />
+      <TheHeroMobile :date="heroData.heroMobile"/>
+      <TheHeroContribution :date="heroData.heroContribution"/>
     </section>
   </div>
 </template>
