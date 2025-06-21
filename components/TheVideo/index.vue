@@ -1,18 +1,24 @@
-import { initAsyncCompiler } from 'sass-embedded';
 <script setup>
 const config = useRuntimeConfig()
+import { videoData } from '@/stores/video'
 </script>
 
 <template>
   <div class="wrapper">
     <section class="video">
       <div class="video__btn">
-          Play
+          {{ videoData.buttonText }}
           <div class="video__btn-icon">
-            <img src="/assets/image/icon-play.png" alt="icon play">
+            <img 
+              :src="`${config.app.baseURL}image/${videoData.iconPlay}`"
+              alt="icon play"
+            >
           </div>
       </div>
-      <video class="video__video" src="#" :poster="`${config.app.baseURL}image/image-video.jpg`"></video>
+      <video 
+        class="video__video" src="#" 
+        :poster="`${config.app.baseURL}image/${videoData.videoPoster}`">
+      </video>
     </section>
   </div>
 </template>
