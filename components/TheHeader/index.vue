@@ -1,8 +1,12 @@
+<script setup>
+import { headerData } from '@/stores/header'
+</script>
+
 <template>
   <header class="header">
     <TheHeaderLogo />
-    <AppNav />
-    <AppButton link-classes="button">Contact</AppButton>
+    <AppNav :items="headerData.nuvItems"/>
+    <AppButton link-classes="button">{{ headerData.buttonText }}</AppButton>
   </header>
 </template>
 
