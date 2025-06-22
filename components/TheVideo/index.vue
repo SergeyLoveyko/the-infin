@@ -1,14 +1,24 @@
-import { initAsyncCompiler } from 'sass-embedded';
+<script setup>
+const config = useRuntimeConfig()
+import { videoData } from '@/stores/video'
+</script>
+
 <template>
   <div class="wrapper">
     <section class="video">
       <div class="video__btn">
-          Play
+          {{ videoData.buttonText }}
           <div class="video__btn-icon">
-            <img src="../assets/image/icon-play.png" alt="">
+            <img 
+              :src="`${config.app.baseURL}image/icon-play.png`"
+              alt="icon play"
+            >
           </div>
       </div>
-      <video class="video__video" src="#" poster="../assets/image/image-video.jpg"></video>
+      <video 
+        class="video__video" src="#" 
+        :poster="`${config.app.baseURL}image/image-video.jpg`">
+      </video>
     </section>
   </div>
 </template>
@@ -38,7 +48,6 @@ import { initAsyncCompiler } from 'sass-embedded';
     align-items: center;
     border-radius: 50px;
     left: 50%;
-    // -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     bottom: 165px;
     cursor: pointer;
