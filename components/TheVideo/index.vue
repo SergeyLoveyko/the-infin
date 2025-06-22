@@ -48,7 +48,6 @@ import { videoData } from '@/stores/video'
     align-items: center;
     border-radius: 50px;
     left: 50%;
-    // -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     bottom: 165px;
     cursor: pointer;

@@ -1,11 +1,4 @@
 <script setup>
-// const props = defineProps({ 
-//   item: {
-//     title: String,
-//     text: String,
-//     image: String
-//   }
-// })
 const config = useRuntimeConfig()
 const props = defineProps({
   item: {
