@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: false,
   app: {
-    baseURL: process.env.NODE_ENV === 'production' ? '/the-infin-try/' : '/'
+    baseURL: process.env.NODE_ENV === 'production' ? '/the-infin/' : '/'
   },
   css: ['/assets/scss/main.scss']
 })
