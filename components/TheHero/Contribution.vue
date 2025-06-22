@@ -15,7 +15,7 @@ const props = defineProps({
     </div>
     <div class="contribution__title">
       <h2>{{ date.title }}</h2>
-      <img :src="`${config.app.baseURL}image/${date.image}`" alt="group stars">
+      <img :src="`${config.app.baseURL}image/group-stars.png`" alt="group stars">
     </div>
     <div class="contribution__btn">
       <AppButton :link-classes="`button ${date.buttonStyle}`">
