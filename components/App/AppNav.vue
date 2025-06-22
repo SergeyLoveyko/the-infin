@@ -1,11 +1,10 @@
 <script setup>
-const items = [
-  'Home',
-  'For Businesses',
-  'For Individuals',
-  'Capitalism 2.0',
-  'Marketing Efforts'
-  ]
+const props = defineProps({
+    items: {
+    type: Object,
+    required: true
+  }
+})
 </script>
 
 <template>
