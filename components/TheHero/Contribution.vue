@@ -4,6 +4,10 @@ const props = defineProps({
   date: {
     type: Object,
     required: true
+  },
+  buttonClass: {
+    type: String,
+    default: ''
   }
 })
 </script>
@@ -18,7 +22,7 @@ const props = defineProps({
       <img :src="`${config.app.baseURL}image/group-stars.png`" alt="group stars">
     </div>
     <div class="contribution__btn">
-      <AppButton :link-classes="`button ${date.buttonStyle}`">
+      <AppButton :link-classes="`button ${buttonClass}`">
         {{ date.buttonText }}
       </AppButton>
     </div>

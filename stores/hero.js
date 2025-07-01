@@ -6,7 +6,6 @@ export const heroData = {
   heroContribution: {
     title: 'To know your true value, Help others understand theirs.',
     text: 'A market-based assessment of your contribution.',
-    buttonText: 'Schedule a demo',
-    buttonStyle: 'button__black-small'
+    buttonText: 'Schedule a demo'
   }
 }

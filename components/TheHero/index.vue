@@ -6,7 +6,10 @@ import { heroData } from '@/stores/hero'
   <div class="wrapper">
     <section class="hero">
       <TheHeroMobile :date="heroData.heroMobile"/>
-      <TheHeroContribution :date="heroData.heroContribution"/>
+      <TheHeroContribution 
+        :date="heroData.heroContribution"
+        buttonClass="button__black-small"
+      />
     </section>
   </div>
 </template>
