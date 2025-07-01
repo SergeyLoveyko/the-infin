@@ -1,7 +1,7 @@
 <script setup>
 const props = defineProps({
-    items: {
-    type: Object,
+  items: {
+    type: Array,
     required: true
   }
 })
