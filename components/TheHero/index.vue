@@ -5,7 +5,6 @@ import { heroData } from '@/stores/hero'
 <template>
   <div class="wrapper">
     <section class="hero">
-      <TheHeader />
       <TheHeroMobile :date="heroData.heroMobile"/>
       <TheHeroContribution :date="heroData.heroContribution"/>
     </section>
@@ -15,7 +14,7 @@ import { heroData } from '@/stores/hero'
 <style lang="scss" scoped>
 
   .hero {
-    padding: 30px 18px;
+    padding: 106px 18px 30px 18px;
   }
 
 </style>
