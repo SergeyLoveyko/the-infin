@@ -1,5 +1,19 @@
 <script setup>
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { chooseData } from '@/stores/choose'
+
+const { locale } = useI18n()
+
+const localizedItems = computed(() => 
+  chooseData.items.map(item => ({
+    title: item.title[locale.value],
+    text: item.text[locale.value],
+    image: item.image
+  }))
+)
+
+const localizedTitle = computed(() => chooseData.sectionTitle[locale.value])
 </script>
 
 <template>
@@ -7,12 +21,12 @@ import { chooseData } from '@/stores/choose'
     <section class="choose">
       <div class="choose__title">
         <AppTitleMore class="title">
-          {{ chooseData.sectionTitle }}
+          {{ localizedTitle }}
         </AppTitleMore>
       </div>
       <div class="choose__content">
         <TheChooseContentItem
-          v-for="(item, index) in chooseData.items"
+          v-for="(item, index) in localizedItems"
           :key="index"
           :item="item"
         />

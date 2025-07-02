@@ -36,7 +36,7 @@ const props = defineProps({
   }
 
   .contribution__text {
-    max-width: 115px;
+    max-width: 105px;
     margin-right: 32px;
 
     p {

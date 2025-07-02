@@ -1,3 +1,6 @@
 export const videoData = {
-  buttonText: 'Play'
+  buttonText: {
+    en: 'Play',
+    uk: 'Грати'
+  }
 }

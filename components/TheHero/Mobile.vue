@@ -25,7 +25,8 @@ const props = defineProps({
 }
 
 .mobile__content {
-  margin-right: 75px;
+  width: 140px;
+  // margin-right: 75px;
   
   & span {
     display: flex;

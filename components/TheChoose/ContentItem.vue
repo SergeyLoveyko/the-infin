@@ -30,6 +30,8 @@ const props = defineProps({
     padding: 30px 18px 30px 0px;
 
     img {
+      width: 223px;
+      height: 223px;
       border-radius: 20px;
     }
   }
@@ -51,6 +53,7 @@ const props = defineProps({
       font-size: 20px;
       line-height: 1.3;
     }
+
   }
 
 </style>
