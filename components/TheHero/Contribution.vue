@@ -1,14 +1,30 @@
+<script setup>
+const config = useRuntimeConfig()
+const props = defineProps({
+  date: {
+    type: Object,
+    required: true
+  },
+  buttonClass: {
+    type: String,
+    default: ''
+  }
+})
+</script>
+
 <template>
   <div class="hero__contribution contribution">
     <div class="contribution__text">
-      <p>A market-based <br /> assessment of your <br /> contribution.</p>
+      <p>{{ date.text }}</p>
     </div>
     <div class="contribution__title">
-      <h2>To know your true value,  Help others understand theirs.</h2>
-      <img src="../assets/image/group-stars.png" alt="group stars">
+      <h2>{{ date.title }}</h2>
+      <img :src="`${config.app.baseURL}image/group-stars.png`" alt="group stars">
     </div>
     <div class="contribution__btn">
-      <AppButton link-classes="button button__black-small">Schedule a demo</AppButton>
+      <AppButton :link-classes="`button ${buttonClass}`">
+        {{ date.buttonText }}
+      </AppButton>
     </div>
   </div>
 </template>
@@ -20,7 +36,7 @@
   }
 
   .contribution__text {
-    max-width: 115px;
+    max-width: 105px;
     margin-right: 32px;
 
     p {

@@ -1,8 +1,17 @@
+<script setup>
+const props = defineProps({
+  date: {
+    type: Object,
+    required: true
+  }
+})
+</script>
+
 <template>
   <div class="hero__mobile mobile">
     <div class="mobile__content">
-      <span>Web +</span>
-      <span>Mobile app</span>
+      <span>{{ date.textOne }}</span>
+      <span>{{ date.textTwo }}</span>
     </div>
     <div class="mobile__image"></div>
   </div>
@@ -16,7 +25,8 @@
 }
 
 .mobile__content {
-  margin-right: 75px;
+  width: 140px;
+  // margin-right: 75px;
   
   & span {
     display: flex;
@@ -30,7 +40,7 @@
 .mobile__image {
   width: 201px;
   height: 160px;
-  background-image: url("../assets/image/hero-app.jpg");
+  background-image: url("/assets/image/hero-app.jpg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: 160%;

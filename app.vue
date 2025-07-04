@@ -1,7 +1,8 @@
 <template>
-  <AppHero />
-  <AppVideo />
-  <AppChoose />
+  <TheHeader />
+  <TheHero />
+  <TheVideo />
+  <TheChoose />
   <!-- <AppBusines /> -->
   <!-- <AppIndividuals /> -->
 </template>

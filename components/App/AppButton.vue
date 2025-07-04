@@ -1,5 +1,4 @@
 <script setup>
-// const { linkClasses = 'button' } = defineProps<{ linkClasses?: string }>()
 const props = defineProps({ linkClasses: String })
 </script>
 
@@ -55,8 +54,7 @@ const props = defineProps({ linkClasses: String })
         color: #ffffff;
         background-color: #121212;
       }
-    }
-    
+    } 
   }
 
 </style>

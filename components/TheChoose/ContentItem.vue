@@ -1,18 +1,24 @@
 <script setup>
-const props = defineProps({ item: {title: String, text: String, image: String} })
+const config = useRuntimeConfig()
+const props = defineProps({
+  item: {
+    type: Object,
+    required: true
+  }
+})
 </script>
 
 <template>
   <div class="container">
     <div class="container__title">
-      <span>{{ props.item.title }}</span>
+      <span>{{ item.title }}</span>
     </div>
     <div class="container__text">
       <p>
-        {{ props.item.text }}
+        {{ item.text }}
       </p>
     </div>
-    <img :src="`/_nuxt/assets/image/${props.item.image}.jpg`" alt="people foto">
+    <img :src="`${config.app.baseURL}image/${item.image}.jpg`" alt="people foto">
   </div>
 </template>
 
@@ -24,6 +30,8 @@ const props = defineProps({ item: {title: String, text: String, image: String} }
     padding: 30px 18px 30px 0px;
 
     img {
+      width: 223px;
+      height: 223px;
       border-radius: 20px;
     }
   }
@@ -45,6 +53,7 @@ const props = defineProps({ item: {title: String, text: String, image: String} }
       font-size: 20px;
       line-height: 1.3;
     }
+
   }
 
 </style>
