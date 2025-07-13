@@ -1,28 +1,27 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { heroData } from '@/stores/hero'
 
-const { locale } = useI18n()
+const { t } = useI18n()
 
-const localizedMobile = computed(() => ({
-  textOne: heroData.heroMobile.textOne[locale.value],
-  textTwo: heroData.heroMobile.textTwo[locale.value]
+const mobile = computed(() => ({
+  textOne: t('hero.mobile.textOne'),
+  textTwo: t('hero.mobile.textTwo')
 }))
 
-const localizedContribution = computed(() => ({
-  title: heroData.heroContribution.title[locale.value],
-  text: heroData.heroContribution.text[locale.value],
-  buttonText: heroData.heroContribution.buttonText[locale.value]
+const contribution = computed(() => ({
+  title: t('hero.contribution.title'),
+  text: t('hero.contribution.text'),
+  button: t('hero.contribution.button')
 }))
 </script>
 
 <template>
   <div class="wrapper">
     <section class="hero">
-      <TheHeroMobile :date="localizedMobile"/>
+      <TheHeroMobile :date="mobile"/>
       <TheHeroContribution 
-        :date="localizedContribution"
+        :date="contribution"
         buttonClass="button__black-small"
       />
     </section>

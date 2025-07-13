@@ -1,28 +1,25 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-const { locale, locales, setLocale } = useI18n()
-import { headerData } from '@/stores/header'
 
-const switchLocalePath = useSwitchLocalePath()
+const { t, locale, locales, setLocale, getLocaleMessage  } = useI18n()
+
+const navItems = computed(() => {
+  const nav = getLocaleMessage(locale.value).header.nav
+  return Object.keys(nav).map(key => t(`header.nav.${key}`))
+})
+
 const availableLocales = computed(() => {
   return locales.value.filter(i => i.code !== locale.value)
 })
-
-const localizedNav = computed(() => 
-  headerData.nuvItems.map(item => item[locale.value])
-)
-
-const localizedButton = computed(() => headerData.buttonText[locale.value])
 </script>
 
 <template>
   <header class="header">
     <div class="container">
       <TheHeaderLogo />
-      <AppNav :items="localizedNav"/>
+      <AppNav :items="navItems"/>
       <div>
-        <!-- <AppButton link-classes="button">{{ localizedButton }}</AppButton> -->
         <AppButton
           link-classes="button button_lan"
           href="#" 
@@ -32,7 +29,7 @@ const localizedButton = computed(() => headerData.buttonText[locale.value])
         >
           {{ locale.name }}
         </AppButton>
-        <AppButton link-classes="button">{{ localizedButton }}</AppButton>
+        <AppButton link-classes="button">{{ t('header.button.languages') }}</AppButton>
       </div>
     </div>
   </header>

@@ -1,19 +1,15 @@
 <script setup>
-import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { videoData } from '@/stores/video'
+
+const { t } = useI18n()
 const config = useRuntimeConfig()
-
-const { locale } = useI18n()
-
-const localizedVideo = computed(() => videoData.buttonText[locale.value])
 </script>
 
 <template>
   <div class="wrapper">
     <section class="video">
       <div class="video__btn">
-          {{ localizedVideo }}
+          {{ t('video.button') }}
           <div class="video__btn-icon">
             <img 
               :src="`${config.app.baseURL}image/icon-play.png`"

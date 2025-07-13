@@ -23,7 +23,7 @@ const props = defineProps({
     </div>
     <div class="contribution__btn">
       <AppButton :link-classes="`button ${buttonClass}`">
-        {{ date.buttonText }}
+        {{ date.button }}
       </AppButton>
     </div>
   </div>

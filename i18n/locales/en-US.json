@@ -1,0 +1,44 @@
+{
+  "header": {
+    "nav": {
+      "0": "Home",
+      "1": "For Businesses",
+      "2": "For Individuals",
+      "3": "Capitalism 2.0",
+      "4": "Marketing Efforts"
+    },
+    "button": {
+      "langSwitch": "en",
+      "languages": "Contact"
+    }
+  },
+  "hero": {
+    "mobile": {
+      "textOne": "Web +",
+      "textTwo": "Mobile app"
+    },
+    "contribution": {
+      "title": "To know your true value, Help others understand theirs.",
+      "text": "A market-based assessment of your contribution.",
+      "button": "Schedule a demo"
+    }
+  },
+  "video": {
+    "button": "Play"
+  },
+  "choose": {
+    "title": "Why choose the INFIN",
+    "items": {
+      "0": {
+        "title": "The old way",
+        "text": "Workers compete with their peers for recognition from bosses who also don’t like this dynamic.",
+        "image": "people-one"
+      },
+      "1": {
+        "title": "The INFIN way",
+        "text": "Colleagues dynamically observe and rank each other’s contributions in a confidential, anonymous manner. The INFIN then calculates ownable, individual value and automatically distributes peer-reviewed recognition and rewards (while giving execs a clear picture of individual ROI).",
+        "image": "people-two"
+      }
+    }
+  }
+}

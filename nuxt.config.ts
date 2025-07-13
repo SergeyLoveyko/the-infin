@@ -11,15 +11,13 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
   ],
   i18n: {
-    locales: [
-      { code: 'en', name: 'En' },
-      { code: 'uk', name: 'Uk' }
-    ],
+    lazy: true,
     defaultLocale: 'en',
-    strategy: 'no_prefix',
-    // strategy: 'prefix_except_default', // or 'prefix', 'prefix_and_default', 'no_prefix'
-    detectBrowserLanguage: false,
-    vueI18n: './i18n/i18n.config.ts',
-    optimizeTranslationDirective: false
+    langDir: 'locales/',
+    locales: [
+      { code: 'en', name: 'En', file: 'en-US.json' },
+      { code: 'uk', name: 'Uk', file: 'uk-UK.json' }
+    ],
+    vueI18n: './i18n.config.ts',
   }
 })
