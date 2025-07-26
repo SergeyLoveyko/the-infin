@@ -18,8 +18,10 @@ const props = defineProps({
       <p>{{ date.text }}</p>
     </div>
     <div class="contribution__title">
-      <h2>{{ date.title }}</h2>
-      <img :src="`${config.app.baseURL}image/group-stars.png`" alt="group stars">
+      <h2>
+        {{ date.title }}
+        <img :src="`${config.app.baseURL}image/group-stars.png`" alt="group stars">
+      </h2>
     </div>
     <div class="contribution__btn">
       <AppButton :link-classes="`button ${buttonClass}`">
@@ -47,21 +49,24 @@ const props = defineProps({
 
   .contribution__title {
     position: relative;
-    max-width: 905px;
+    max-width: 69%;
     margin-right: auto;
 
     h2 {
-      font-size: 88px;
+      font-size: clamp(36px, 6vw + 0.05rem, 88px);
       line-height: 0.9;
       font-weight: 400;
       text-transform: uppercase;
+
+      img {
+        position: absolute;
+        top: -2.5em;
+        right: -0.9em;
+        width: 5em;
+        max-width: 100%;
+      }
     }
 
-    img {
-      position: absolute;
-      top: -155px;
-      right: -75px;
-    }
   }
 
   .contribution__btn {

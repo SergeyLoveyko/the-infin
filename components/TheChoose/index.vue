@@ -16,18 +16,20 @@ const items = computed(() => {
 <template>
   <div class="wrapper">
     <section class="choose">
-      <div class="choose__title">
-        <AppTitleMore class="title">
-          {{ t('choose.title') }}
-        </AppTitleMore>
-      </div>
-      <div class="choose__content">
-        <TheChooseContentItem
-          v-for="(item, index) in items"
-          :key="index"
-          :item="item"
-        />
-      </div>
+      <AppRow class="justify-space-between">
+        <AppCol class="choose__title" :span="56">
+          <AppTitleMore class="title">
+            {{ t('choose.title') }}
+          </AppTitleMore>
+        </AppCol>
+        <AppCol class="choose__content" :span="16">
+          <TheChooseContentItem
+            v-for="(item, index) in items"
+            :key="index"
+            :item="item"
+          />
+        </AppCol>
+      </AppRow>
     </section>
   </div>
 </template>
@@ -35,14 +37,14 @@ const items = computed(() => {
 <style lang="scss" scoped>
 
   .choose {
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
     padding: 0 0 130px 18px;
   }
 
-  .choose__title {
-    width: 360px;
-  }
+  // .choose__title {
+  //   width: 360px;
+  // }
 
   .title {
     position: relative;

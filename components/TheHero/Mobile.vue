@@ -8,24 +8,29 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="hero__mobile mobile">
-    <div class="mobile__content">
-      <span>{{ date.textOne }}</span>
-      <span>{{ date.textTwo }}</span>
-    </div>
-    <div class="mobile__image"></div>
-  </div>
+  <AppRow class="hero__mobile mobile">
+    <!-- <div class="hero__mobile mobile"> -->
+      <AppCol class="mobile__content" :span="52">
+        <!-- <div class="mobile__content"> -->
+          <span>{{ date.textOne }}</span>
+          <span>{{ date.textTwo }}</span>
+        <!-- </div> -->
+      </AppCol>
+      <AppCol :span="63">
+        <div class="mobile__image"></div>
+      </AppCol>
+    <!-- </div> -->
+  </AppRow>
 </template>
 
 <style lang="scss" scoped>
 
 .hero__mobile {
-  display: flex;
   margin-bottom: 128px;
 }
 
 .mobile__content {
-  width: 140px;
+  // width: 140px;
   // margin-right: 75px;
   
   & span {
@@ -38,8 +43,10 @@ const props = defineProps({
 }
 
 .mobile__image {
-  width: 201px;
-  height: 160px;
+  // width: 201px;
+  // height: 160px;
+  aspect-ratio: 16 / 12;
+  width: 100%;
   background-image: url("/assets/image/hero-app.jpg");
   background-repeat: no-repeat;
   background-position: top;
